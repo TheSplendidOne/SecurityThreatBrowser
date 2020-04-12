@@ -13,7 +13,7 @@ namespace SecurityThreatBrowser
 
         private void OpenSelectedFileOnClick(Object sender, RoutedEventArgs e)
         {
-            if(OpenManager.OpenFile((String) FilesPaths.SelectedItem))
+            if(FilesPaths.SelectedItem != null && OpenManager.OpenFile((String) FilesPaths.SelectedItem))
                 DialogResult = true;
         }
 
