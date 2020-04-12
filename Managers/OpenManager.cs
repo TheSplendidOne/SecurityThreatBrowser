@@ -18,8 +18,8 @@ namespace SecurityThreatBrowser
                 {
                     if(!ReadThreats(fileInfo, out IEnumerable<Threat> threats))
                         return false;
-                    SettingsManager.AddFilePath(filePath);
                     UpdateMainWindow(threats);
+                    SettingsManager.AddFilePath(filePath);
                     OpenedFilePath = filePath;
                     return true;
                 }
